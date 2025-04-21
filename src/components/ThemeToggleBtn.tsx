@@ -23,7 +23,7 @@ export default function ThemeToggleBtn () {
 const ThemeBtn = styled.button`
 	padding: 0;
 	background: none;
-	height: 24px;
+	height: 1.5rem;
 	border: none;
 	color: ${props => props.theme.themeIconColor};
 	user-select: none;

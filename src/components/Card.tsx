@@ -10,25 +10,25 @@ export type OnMouseOrTouchEvent = (event: React.MouseEvent<HTMLElement> | React.
 
 interface CardProps {
 	data: {
-		title: string,
-		subTitle?: string,
-		bgImg?: string,
-		styleTypeOnSM?: STYLE_TYPE_ON_SM,
-		alignTextOnSM?: ALIGN_TEXT_ON_SM,
-		useAltTitleColor?: boolean,
+		title: string;
+		subTitle?: string;
+		bgImg?: string;
+		styleTypeOnSM?: STYLE_TYPE_ON_SM;
+		alignTextOnSM?: ALIGN_TEXT_ON_SM;
+		useAltTitleColor?: boolean;
 	},
-	children?: React.ReactNode,
-	onMouseEnter?: OnMouseOrTouchEvent,
-  	onMouseLeave?: OnMouseOrTouchEvent,
+	children?: React.ReactNode;
+	onMouseEnter?: OnMouseOrTouchEvent;
+  	onMouseLeave?: OnMouseOrTouchEvent;
 };
 
 interface ContainerProps {
-	$bgImg?: string,
-	$contentHeight?: number,
+	$bgImg?: string;
+	$contentHeight?: number;
 };
 
 interface TitleProps {
-	$useAltTitleColor?: boolean,
+	$useAltTitleColor?: boolean;
 };
 
 export default function Card ({ data, children, onMouseEnter, onMouseLeave } : CardProps) {
@@ -99,13 +99,13 @@ const Container = styled.section<ContainerProps>`
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	border-radius: 20px;
+	border-radius: 1.25rem;
 	box-sizing: border-box;
 	line-height: 1.5;
 	cursor: pointer;
 
 	&.${STYLE_TYPE_ON_SM.DEFAULT} {
-		padding: 24px;
+		padding: 1.5rem;
 		background-image: url(${props => props.$bgImg});
 		background-size: cover;
 		background-position: center;
@@ -142,18 +142,18 @@ const Container = styled.section<ContainerProps>`
 
 		justify-content: center;
 		align-items: center;
-		height: 480px;
-		min-width: 480px;
-		max-width: 480px;
-		height: 520px;
+		height: 30rem;
+		min-width: 30rem;
+		max-width: 30rem;
+		height: 32.5rem;
 		max-height: 100%;
-		padding: 40px !important;
+		padding: 2.5rem !important;
 		text-align: center;
 		transition: all .4s ease;
 
 		&:hover {
-			min-width: 580px;
-			max-width: 580px;
+			min-width: 36.25rem;
+			max-width: 36.25rem;
 		}
 
 		&:hover ${CardContent} {
@@ -177,9 +177,9 @@ const CardSubTitle = styled.p`
 
 const BgImage = styled.div<ContainerProps>`
 	width: 100%;
-	height: 400px;
-	border-radius: 20px;
-	margin-bottom: 16px;
+	height: 25rem;
+	border-radius: 1.25rem;
+	margin-bottom: 1rem;
 	box-sizing: border-box;
 	background-image: url(${props => props.$bgImg });
 	background-size: cover;
@@ -188,7 +188,7 @@ const BgImage = styled.div<ContainerProps>`
 	background-color: ${props => props.theme.subtleBg};
 
 	@media (min-width: ${breakpoints.sm}) {
-		height: 520px;
+		height: 32.5rem;
 	}
 
 	@media (min-width: ${breakpoints.lg}) {

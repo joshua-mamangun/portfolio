@@ -6,19 +6,19 @@ import { STYLE_TYPE_ON_SM } from "../utils/constants";
 
 interface ExperienceCardProps {
 	data: {
-		title: string,
-		subTitle: string,
+		title: string;
+		subTitle: string;
 		list: {
-			position: string,
-			company: string,
-			dateStart: string,
-			dateEnd: string,
-			type: string,
-			isTabbed?: boolean,
-		}[],
-	},
-	onMouseEnter?: OnMouseOrTouchEvent,
-	onMouseLeave?: OnMouseOrTouchEvent,
+			position: string;
+			company: string;
+			dateStart: string;
+			dateEnd: string;
+			type: string;
+			isTabbed?: boolean;
+		}[];
+	};
+	onMouseEnter?: OnMouseOrTouchEvent;
+	onMouseLeave?: OnMouseOrTouchEvent;
 };
 
 export default function ExperienceCard ({ data, onMouseEnter, onMouseLeave } : ExperienceCardProps) {
@@ -64,10 +64,10 @@ export default function ExperienceCard ({ data, onMouseEnter, onMouseLeave } : E
 const ExperienceList = styled.ul`
 	display: flex;
 	flex-direction: column;
-	gap: 16px;
+	gap: 1rem;
 	list-style-type: none;
 	margin: 0;
-	padding: 32px 12px 0;
+	padding: 2rem 0.75rem 0;
 
 	@media (min-width: ${breakpoints.sm}) {
 		padding-right: 0;
@@ -75,8 +75,8 @@ const ExperienceList = styled.ul`
 	}
 	
 	@media (min-width: ${breakpoints.lg}) {
-		padding-right: 12px;
-		padding-left: 12px;
+		padding-right: 0.75rem;
+		padding-left: 0.75rem;
 	}
 `;
 

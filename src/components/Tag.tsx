@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 interface TagProps {
-	children: string,
+	children: string;
 };
 
 export default function Tag ({ children } : TagProps) {
@@ -11,15 +11,15 @@ export default function Tag ({ children } : TagProps) {
 };
 
 const TagContainer = styled.div`
-	border-radius: 18px;
+	border-radius: 1.125rem;
 	background: ${props => props.theme.subtleBg};
 	color: ${props => props.theme.text};
-	height: 32px;
+	height: 2rem;
 	font-size: 0.875rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 0 15px;
+	padding: 0 0.9375rem;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;

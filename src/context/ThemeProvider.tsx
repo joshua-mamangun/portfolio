@@ -4,7 +4,7 @@ import { ThemeProvider as StyledThemeProvider } from "styled-components";
 import { ThemeContext } from "./ThemeContext";
 
 interface ThemeProviderProps {
-	children: React.ReactNode,
+	children: React.ReactNode;
 };
 
 export default function ThemeProvider ({ children }: ThemeProviderProps) {

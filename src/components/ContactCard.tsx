@@ -5,16 +5,16 @@ import { STYLE_TYPE_ON_SM } from "../utils/constants";
 
 interface ContactCardProps {
 	data: {
-		title: string,
-		subTitle: string,
+		title: string;
+		subTitle: string;
 		list: {
-			type: string,
-			value: string,
-			url: string
-		}[],
+			type: string;
+			value: string;
+			url: string;
+		}[];
 	},
-	onMouseEnter?: OnMouseOrTouchEvent,
-	onMouseLeave?: OnMouseOrTouchEvent,
+	onMouseEnter?: OnMouseOrTouchEvent;
+	onMouseLeave?: OnMouseOrTouchEvent;
 };
 
 export default function ContactCard ({ data, onMouseEnter, onMouseLeave } : ContactCardProps) {
@@ -53,11 +53,11 @@ export default function ContactCard ({ data, onMouseEnter, onMouseLeave } : Cont
 const ContactList = styled.ul`
 	display: flex;
 	flex-direction: column;
-	gap: 16px;
+	gap: 1rem;
 	list-style-type: none;
 	text-align: center;
 	margin: 0;
-	padding: 32px 0 0;
+	padding: 2rem 0 0;
 `;
 
 const ContactItem = styled.li`

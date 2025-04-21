@@ -6,11 +6,11 @@ import usePrefersLargerText from "../hooks/usePrefersLargerText";
 
 interface HeaderSectionProps {
 	data: {
-		name: string,
-		position: string,
-		desc: string,
-		techStacks: string[],
-	},
+		name: string;
+		position: string;
+		desc: string;
+		techStacks: string[];
+	};
 };
 
 export default function HeaderSection ({ data } : HeaderSectionProps) {
@@ -42,17 +42,17 @@ export default function HeaderSection ({ data } : HeaderSectionProps) {
 };
 
 const Container = styled.section`
-	padding: 24px;
+	padding: 1.5rem;
 	display: flex;
 	flex-direction: column;
-	gap: 24px;
+	gap: 1.5rem;
 
 	@media (min-width: ${breakpoints.lg}) {
 		width: 100%;
-		padding: 0 40px;
+		padding: 0 2.5rem;
 		flex-direction: row;
 		align-items: flex-start;
-		gap: 40px;
+		gap: 2.5rem;
 		justify-content: space-between;
 		align-items: center;
 	}
@@ -81,7 +81,7 @@ const IntroSection = styled.div`
 const Position = styled.div`
 	display: flex;
 	flex-direction: row;
-	gap: 4px;
+	gap: 0.25rem;
 	align-items: center;
 `;
 
@@ -94,11 +94,11 @@ const PositionTitle = styled.p`
 const Description = styled.p`
 	font-size: 1rem;
 	color: ${props => props.theme.subtleText};
-	margin: 8px 0 0;
+	margin: 0.5rem 0 0;
 	line-height: 1.5;
 
 	@media (min-width: ${breakpoints.lg}) {
-		margin-top: 10px;
+		margin-top: 0.625rem;
 	}
 `;
 
@@ -107,14 +107,14 @@ const TechStacksList = styled.ul<{ $prefersLargerText?: boolean }>`
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	gap: 8px;
+	gap: 0.5rem;
 	padding: 0;
-	margin: 12px 0 0;
+	margin: 0.75rem 0 0;
 
 	@media (min-width: ${breakpoints.lg}) {
 		flex-wrap: ${props => props.$prefersLargerText ? 'wrap' : 'nowrap'};
-		gap: 10px;
-		margin-top: 10px;
+		gap: 0.625rem;
+		margin-top: 0.625rem;
 		overflow: hidden;
 	}
 `;

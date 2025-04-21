@@ -7,19 +7,20 @@ export type ProjectStyleTypeOnSM = (typeof PROJECT_STYLE_TYPES_ON_SM)[number];
 
 interface ProjectCardProps {
 	data: {
-		title: string,
-		shortDesc: string,
-		desc: string,
-		techStacks: string[],
+		title: string;
+		shortDesc: string;
+		desc: string;
+		techStacks: string[];
 		links: {
-			label: string,
-			url: string,
-			target?: string,
-		}[],
-		styleTypeOnSM?: ProjectStyleTypeOnSM,
-	},
-	onMouseEnter?: OnMouseOrTouchEvent,
-	onMouseLeave?: OnMouseOrTouchEvent,
+			label: string;
+			url: string;
+			target?: string;
+		}[];
+		styleTypeOnSM?: ProjectStyleTypeOnSM;
+		bgImg?: string;
+	};
+	onMouseEnter?: OnMouseOrTouchEvent;
+	onMouseLeave?: OnMouseOrTouchEvent;
 };
 
 export default function ProjectCard ({ data, onMouseEnter, onMouseLeave } : ProjectCardProps) {
@@ -30,6 +31,7 @@ export default function ProjectCard ({ data, onMouseEnter, onMouseLeave } : Proj
 				subTitle: data.shortDesc,
 				styleTypeOnSM: data.styleTypeOnSM ?? STYLE_TYPE_ON_SM.TOP_IMG,
 				alignTextOnSM: ALIGN_TEXT_ON_SM.LEFT,
+				bgImg: data.bgImg
 			}} 
 			onMouseEnter={onMouseEnter}
 			onMouseLeave={onMouseLeave}
@@ -62,10 +64,10 @@ const ProjectContent = styled.div`
 
 const ProjectDesc = styled.p`
 	display: none;
-	margin: 8px 0 0;
+	margin: 0.5rem 0 0;
 
 	@media (min-width: ${breakpoints.lg}) {
-		margin: 40px 0 0;
+		margin: 2.5rem 0 0;
 		display: block;
 	}
 `;
@@ -73,10 +75,10 @@ const ProjectDesc = styled.p`
 const LinksList = styled.div`
 	display: flex;
 	flex-direction: row;
-	gap: 14px;
+	gap: 0.875rem;
 
 	@media (min-width: ${breakpoints.lg}) {
-		margin-top: 18px;
+		margin-top: 1.125rem;
 		justify-content: space-between;
 	}
 `;

@@ -71,8 +71,9 @@ const data = {
 				techStacks: ['React', 'Vite', 'TypeScript', 'Tailwind'],
 				links: [
 					{ label: 'Visit Site', url: 'https://joshua-mamangun.github.io/marketing-1/' },
-					{ label: 'View Code', url: 'https://github.com/joshua-mamangun/marketing-1-vite-ts-tailwind' },
+					{ label: 'View Code', url: 'https://github.com/joshua-mamangun/marketing-1' },
 				],
+				// bgImg: './project-marketing-1.jpg'
 			},
 			{
 				title: 'Marketing Site #2',
@@ -157,13 +158,13 @@ const Main = styled.main`
 	max-width: 100vw;
 
 	@media (min-width: ${breakpoints.sm}) {
-		padding: 20px;
+		padding: 1.25rem;
 	}
 	
 	@media (min-width: ${breakpoints.lg}) {
 		width: 100vw;
-		max-width: 1280px;
-		padding: 40px 0;
+		max-width: 80rem;
+		padding: 2.5rem 0;
 		height: 100vh;
 		display: flex;
 		flex-direction: column;
@@ -178,17 +179,17 @@ const CardsList = styled.section`
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	gap: 36px;
-	padding: 8px 24px 36px;
+	gap: 2.25rem;
+	padding: 0.5rem 1.5rem 2.25rem;
 
 	@media (min-width: ${breakpoints.lg}) {
-		padding: 40px 40px 20px;
+		padding: 2.5rem 2.5rem 1.25rem;
 		flex-direction: row;
 		flex-wrap: nowrap;
 		overflow: hidden;
 		box-sizing: border-box;
-		gap: 30px;
-		max-width: 1280px;
+		gap: 1.875rem;
+		max-width: 80rem;
 		transition: all .4s ease;
 	}
 `;
