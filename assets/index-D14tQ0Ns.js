@@ -91,7 +91,7 @@ Error generating stack: `+e.message+`
 		background-color: ${i=>i.theme.scrollBg};
 		border-radius: 8px;
 	}
-`;function Gv(){const[i,s]=Bl.useState(""),o=Bl.useMemo(()=>Bl.lazy(async()=>{const r=await U1(()=>import("./AppMain-CCGF2igj.js"),[]);return s("fadeOut"),await new Promise(m=>setTimeout(m,500)),r}),[]);return fe.jsxs(Bv,{children:[fe.jsx(Yv,{}),fe.jsx(Bl.Suspense,{fallback:fe.jsx(xv,{className:i}),children:fe.jsx(o,{})})]})}const jv=Nv`
+`;function Gv(){const[i,s]=Bl.useState(""),o=Bl.useMemo(()=>Bl.lazy(async()=>{const r=await U1(()=>import("./AppMain-CzQ-sVIh.js"),[]);return s("fadeOut"),await new Promise(m=>setTimeout(m,500)),r}),[]);return fe.jsxs(Bv,{children:[fe.jsx(Yv,{}),fe.jsx(Bl.Suspense,{fallback:fe.jsx(xv,{className:i}),children:fe.jsx(o,{})})]})}const jv=Nv`
 	0% { opacity: 0; }
 	100% { opacity: 1; }
 `,xv=$0.div`
